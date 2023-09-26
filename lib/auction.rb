@@ -20,7 +20,7 @@ class Auction
    unpopular_items = []
     @items.select do |item|
       if item.bids.empty?
-      unpopular_items << item
+        unpopular_items << item
       end
     end
     unpopular_items
