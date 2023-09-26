@@ -1,0 +1,17 @@
+require './lib/item'
+require './lib/auction'
+require './lib/attendee'
+
+RSpec.describe Attendee do
+  describe '#initialize' do
+    it 'can initialize' do
+      item1 = Item.new('Chalkware Piggy Bank')
+      item2 = Item.new('Bamboo Picture Frame')
+      attendee = Attendee.new({name: 'Megan', budget: '$50'})
+
+      expect(attendee).to be_an_instance_of(Attendee)
+      expect(attendee.name).to eq("Megan")
+      expect(attendee.budget).to eq(50)
+    end
+  end
+end
